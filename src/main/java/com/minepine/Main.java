@@ -6,7 +6,7 @@ public class Main
 {
 	public static void main(String[] args)
 	{
-		
+		getConnection();
 	}
 	
 	public static Connection getConnection()
@@ -14,9 +14,9 @@ public class Main
 		Connection con = null;
 		try 
 		{
-			Class.forName("com.mysql.jdbc.Driver");
-			String url = "jdbc:";
-			String usr = "root";
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			String url = "jdbc:mysql://74.215.125:3306/Attendence_Tracker";
+			String usr = "minepine";
 			String pwd = "B3ng41s23";
 			con = DriverManager.getConnection(url, usr, pwd);
 		}
