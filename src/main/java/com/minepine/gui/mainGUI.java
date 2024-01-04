@@ -6,6 +6,7 @@ import javax.swing.*;
 public class mainGUI
 {
 	JFrame mainFrame;
+	JButton addPerson;
 	
 	public mainGUI()
 	{
@@ -17,6 +18,12 @@ public class mainGUI
 		JPanel mainPanel = new JPanel();
 		Action a1 = new Action();
 		
+		addPerson = new JButton("Add Student");
+		addPerson.addActionListener(a1);
+		
+		mainPanel.add(addPerson);
+		
+		mainFrame.add(mainPanel);
 		mainFrame.setVisible(true);
 	}
 	
@@ -24,7 +31,10 @@ public class mainGUI
 	{
 		public void actionPerformed(ActionEvent e)
 		{
-			
+			if (e.getSource() == addPerson)
+			{
+				addPerson p1 = new addPerson();
+			}
 		}
 	}
 }

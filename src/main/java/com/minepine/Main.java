@@ -2,8 +2,12 @@ package com.minepine;
 
 import java.sql.*;
 
+import com.minepine.gui.mainGUI;
+
 public class Main 
 {
+	mainGUI gui = new mainGUI();
+	
 	public static void main(String[] args)
 	{
 		getConnection();
