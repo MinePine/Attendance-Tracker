@@ -2,15 +2,13 @@ package com.minepine;
 
 import java.sql.*;
 
-import com.minepine.gui.mainGUI;
+import com.minepine.gui.*;
 
 public class Main 
-{
-	mainGUI gui = new mainGUI();
-	
+{	
 	public static void main(String[] args)
 	{
-		getConnection();
+		loginPage login = new loginPage();
 	}
 	
 	public static Connection getConnection()
@@ -20,8 +18,8 @@ public class Main
 		{
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			String url = "jdbc:mysql://74.215.125:3306/Attendence_Tracker";
-			String usr = "minepine";
-			String pwd = "B3ng41s23";
+			String usr = "guest";
+			String pwd = "";
 			con = DriverManager.getConnection(url, usr, pwd);
 		}
 		catch (ClassNotFoundException e)
